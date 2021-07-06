@@ -30,17 +30,33 @@ Although the data used for this project is not available in this repository, it 
 
 [discuss/describe what the data files contained]
 
+## Data Cleaning
+
+[discuss which columns were removed/remained]
+
+[explain what steps you took when dealing with null values]
+
 ## Feature Engineering
 
+[mention the features you added to the dataset]
+
 ## EDA
+
+[include important EDA plots with explanations of their relevance]
 
 ## Models
 
 #### Preparing the Data
 
+[preprocessing steps]
+
 #### Fitting and Scoring Models
 
+[different models used and their results]
+
 ## Evaluation
+
+[discuss feature importances and plot of residuals]
 
 ## Limitations
 
