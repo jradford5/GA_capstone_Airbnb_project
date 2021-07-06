@@ -1,3 +1,29 @@
-# GA_capstone_Airbnb_project
+#### General Assembly Data Science Immersive Capstone Project
 
-Here is the README file.
+# Predicting the Prices of London Airbnb Properties
+
+[explanation of project]
+
+## Files in This Repository
+
+## Background
+
+## Objectives
+
+## Data Collection
+
+## Feature Engineering
+
+## EDA
+
+## Models
+
+#### Preparing the Data
+
+#### Fitting and Scoring Models
+
+## Evaluation
+
+## Limitations
+
+## Conclusions
