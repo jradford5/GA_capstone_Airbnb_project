@@ -6,7 +6,7 @@
 
 A five-week long personal project on building a machine learning model to predict prices of Airbnb properties in London. This was completed as part of a General Assembly London Data Science Immersive course.
 
-Although the data used for this project is not available in this repository, it can be obtained from its original source at www.InsideAirbnb.com. All code used in the project can be found within the links below.
+Although the data used for this project is not available in this repository, it can be obtained from its original source at [Inside Airbnb](http://insideairbnb.com/). All code used in the project can be found within the links below.
 
 ## Files in This Repository
 
@@ -26,9 +26,11 @@ Although the data used for this project is not available in this repository, it 
 
 ## Data Acquisition
 
-[para about where data was acquired from - discuss the purpose/goals of InsideAirbnb]
+The data was downloaded in csv format from [Inside Airbnb](http://insideairbnb.com/), an organisation that scrapes data from Airbnb's website for properties all over the world. They provide data for property listings, calendars (the future dates that a property is available for), reviews and geographical data for the neighbourhoods that the properties are based in. For this project, I only required the listings and geographical data.
 
-[discuss/describe what the data files contained]
+The listings data contains a broad range of information related to each property, from the text description the host has written about the it to whether the property has Wifi or laundry facilities.
+
+Overall, there were 74 different columns in the dataset that corresponded to 74,840 rows for each Airbnb property in London.
 
 ## Data Cleaning
 
