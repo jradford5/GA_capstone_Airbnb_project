@@ -24,7 +24,7 @@ The goal of this project was to build a regression model that could predict the 
 
 If successful, it could be used to help new hosts in determining a suitable rental price for new properties.
 
-As a by-product of this project, I was also hoping to analyse the attributes that determine the prices of Airbnb properties. 
+As a by-product of this project, I was also hoping to analyse the attributes that determine the prices of Airbnb properties.
 
 ## Data Acquisition
 
@@ -83,7 +83,7 @@ The table below details the regression models that were fitted to the dataset, a
 
 ## Evaluation
 
-[discuss feature importances and plot of residuals]
+Although the
 
 ## Limitations
 
