@@ -10,7 +10,7 @@ Although the data used for this project is not available in this repository, it 
 
 ## Files in This Repository
 
-[insert links here]
+[insert notebook links here]
 
 ## Background
 
@@ -18,11 +18,13 @@ Although the data used for this project is not available in this repository, it 
 
 ## Objectives
 
-1. To build a regression model that can predict the prices of Airbnb properties in London using listings data.
-2. Identify the attributes that determine the prices of Airbnb properties.
-3. Perform high-level data analysis of Airbnb properties in London.
+##### Can we predict the prices of Airbnb properties in London using listings data?
 
-[needs an extra para either before or after the above points]
+The goal of this project was to build a regression model that could predict the prices of Airbnb properties in London using the data available on the listings page of the Airbnb website.
+
+If successful, it could be used to help new hosts in determining a suitable rental price for new properties.
+
+As a by-product of this project, I was also hoping to analyse the attributes that determine the prices of Airbnb properties. 
 
 ## Data Acquisition
 
@@ -57,13 +59,27 @@ I performed an extensive exploratory data analysis to attempt to understand the 
 
 ## Modelling
 
-#### Preparing the Data
+#### Feature Selection
 
-[preprocessing steps]
+Before preparing the dataset, I selected only features that could be extracted from a new property. This meant removing all columns related to reviews, as a new property obviously wouldn't have any.
+
+#### Train-Test Split
+
+The data was separated 80:20 in to training and test sets.
+
+#### Pre-processing
+
+The following Scikit-learn pre-processing steps were applied to the dataset before I began modelling:
+
+- OneHotEncoder
+- StandardScaler
+- CountVectorizer
 
 #### Fitting and Scoring Models
 
-[different models used and their results]
+The table below details the regression models that were fitted to the dataset, along with the R2 scores for the training and test sets and the mean 5-fold cross-validation score.
+
+[insert table]
 
 ## Evaluation
 
