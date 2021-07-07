@@ -36,19 +36,26 @@ Overall, there were 74 different columns in the dataset that corresponded to 74,
 
 There were 798,870 null values across 22 different columns in the dataset. Some columns were removed completely as they contained too many null values, whereas others had their null values filled in with mean values so that the columns could be used as feature variables in my model.
 
-There were also columns that would not have been useful for modelling (host_picture_url, last_scraped) or were virtual duplicates of other columns (bathrooms, nieghbourhood_group_cleansed). These were also dropped from the dataset.
+There were also columns that would not have been useful for modelling (host_picture_url, last_scraped) or were virtual duplicates of other columns (bathrooms, neighbourhood_group_cleansed). These were also dropped from the dataset.
 
 Given that there were a lot of columns, I used a separate data dictionary in a csv file to keep track of what actions I needed to take for each of them.
 
 ## Feature Engineering
 
-Here are some of the 
+Using the GeoPy library and the latitude and longitude columns within the dataset, I added the following geographical features:
+
+- nearest train or tube station
+- the TFL fare zone of the nearest station
+- distance from the property in km to the nearest station
+- based on the postcode of the property, the average monthly rental price for a one-bedroom flat
+
+Length features were also created for all of the text variables to show how many letters each piece of text value.
 
 ## EDA
 
-[include important EDA plots with explanations of their relevance]
+I performed an extensive exploratory data analysis to attempt to understand the data, its distributions and to look for any correlations within the data. All of the code used and plots created can be found here: [insert link for EDA].
 
-## Models
+## Modelling
 
 #### Preparing the Data
 
