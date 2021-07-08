@@ -16,11 +16,11 @@ Although the data used for this project is not available in this repository, it 
 
 ##### Can we predict the prices of Airbnb properties in London using listings data?
 
-The goal of this project was to build a regression model that could predict the prices of Airbnb properties in London using the data available on the listings page of the Airbnb website.
+ - The goal of this project was to build a regression model that could predict the prices of Airbnb properties in London using the data available on the listings page of the Airbnb website.
 
-If successful, it could be used to help new hosts in determining a suitable rental price for new properties.
+- If successful, it could be used to help new hosts in determining a suitable rental price for new properties.
 
-As a by-product of this project, I was also hoping to analyse the attributes that determine the prices of Airbnb properties.
+- As a by-product of this project, I was also hoping to analyse the attributes that determine the prices of Airbnb properties.
 
 ## Data Acquisition
 
@@ -32,11 +32,11 @@ Overall, there were 74 different columns in the dataset that corresponded to 74,
 
 ## Data Cleaning
 
-There were 798,870 null values across 22 different columns in the dataset. Some columns were removed completely as they contained too many null values, whereas others had their null values filled in with mean values so that the columns could be used as feature variables in my model.
+ - There were 798,870 null values across 22 different columns in the dataset. Some columns were removed completely as they contained too many null values, whereas others had their null values filled in with the variable mean.
 
-There were also columns that would not have been useful for modelling (host_picture_url, last_scraped) or were virtual duplicates of other columns (bathrooms, neighbourhood_group_cleansed). These were also dropped from the dataset.
+- Columns that would not have been useful for modelling (host_picture_url, last_scraped) or were virtual duplicates of other columns (bathrooms, neighbourhood_group_cleansed) were also dropped from the dataset.
 
-Given that there were a lot of columns, I used a separate data dictionary in a csv file to keep track of what actions I needed to take for each of them.
+- Given that there were a lot of columns, I used a separate data dictionary in a csv file to keep track of what actions I needed to take for each of them.
 
 ## Feature Engineering
 
