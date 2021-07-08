@@ -12,10 +12,6 @@ Although the data used for this project is not available in this repository, it 
 
 [insert notebook links here]
 
-## Background
-
-[high-level facts about Airbnb London]
-
 ## Objectives
 
 ##### Can we predict the prices of Airbnb properties in London using listings data?
@@ -107,4 +103,10 @@ The biggest dilemma I faced was how to deal with properties that had disproporti
 
 ## Conclusions
 
-This has been a really interesting project,
+I've found this to be a really interesting project and a fun dataset to work with, especially with plotting and feature engineering the geographical variables, but I feel that I need to make some changes to my approach before I can be happy that this project has reached its potential.
+
+My next steps are the following:
+
+-  revisit the data wrangling part of the project to see if I can come up with a better solution to dealing with the disproportionately high price values
+- tweak the parameters for natural language processing - currently the model is giving importance to insignificant words
+- look in to applying principal component analysis to the model to reduce the amount of features
