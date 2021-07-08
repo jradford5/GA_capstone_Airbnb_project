@@ -83,8 +83,28 @@ The table below details the regression models that were fitted to the dataset, a
 
 ## Evaluation
 
-Although the
+Although the model performed reasonably well for properties priced at under £1000 per night, it struggled to accurately predict the prices of properties that were more expensive.
+
+The graph below shows how the random forests model performed when predicting prices in the test set.
+
+[insert graph]
+
+As you can see, there were several huge residual values, where the model had either under or over predicted the price.
 
 ## Limitations
 
+- Aesthetics aren't taken in to account
+
+One of the biggest limitations of this model, is that it's not able to determine the luxury quality of a property. If a property has expensive furniture or stylish architecture, then the model wouldn't be able to factor that into its predictions.
+
+- Computationally expensive
+
+The final dataset contained over 10,000 columns, which meant that it took a very long time to fit a model on. As a result, I wasn't able to run a very extensive grid search.
+
+- Dataset contains a lot of prices that don't match the quality of the apartment
+
+The biggest dilemma I faced was how to deal with properties that had disproportionately high prices. Although the number of such properties was relatively small, they had a big effect of the performance of my model.
+
 ## Conclusions
+
+This has been a really interesting project,
