@@ -53,9 +53,9 @@ Length features were also created for all of the text variables to show how many
 
 I performed an extensive exploratory data analysis to attempt to understand the data, its distributions and to look for any correlations within the data. All of the code used and plots created can be found here: [insert link for EDA].
 
-![](../../../Downloads/airbnb_neighbourhoods.png) ![](../../../Downloads/airbnb_neighbourhoods_2.png)
+![](images/airbnb_neighbourhoods.png) ![](images/airbnb_neighbourhoods_2.png)
 
-![](../../../Downloads/violinplot_price.png)
+![](images/violinplot_price.png)
 
 
 
@@ -81,7 +81,7 @@ The following Scikit-learn pre-processing steps were applied to the dataset befo
 
 The table below details the regression models that were fitted to the dataset, along with the R2 scores for the training and test sets and the mean 5-fold cross-validation score.
 
-![](../../../Downloads/scores.png)
+![](images/scores.png)
 
 
 ## Evaluation
@@ -90,7 +90,7 @@ Although the model performed reasonably well for properties priced at under £10
 
 The graph below shows how the random forests model performed when predicting prices in the test set.
 
-![](../../../Downloads/residual_plots.png)
+![](images/residual_plots.png)
 
 
 As you can see, there were several huge residual values, where the model had either under or over predicted the price.
