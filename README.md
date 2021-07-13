@@ -8,7 +8,7 @@ A five-week long personal project on building a machine learning model to predic
 
 Although the data used for this project is not available in this repository, it can be obtained from its original source at [Inside Airbnb](http://insideairbnb.com/). All code used in the project can be found within the links below.
 
-## Files in This Repository
+## Files in This Repository
 
 [insert notebook links here]
 
@@ -30,7 +30,7 @@ The listings data contains all information related to each property that can be 
 
 Overall, there were 74 different columns in the dataset that corresponded to 74,840 rows for each Airbnb property in London.
 
-## Data Cleaning
+## Data Cleaning
 
  - There were 798,870 null values across 22 different columns in the dataset. Some columns were removed completely as they contained too many null values, whereas others had their null values filled in with the variable mean.
 
@@ -38,7 +38,7 @@ Overall, there were 74 different columns in the dataset that corresponded to 74,
 
 - Given that there were a lot of columns, I used a separate data dictionary in a csv file to keep track of what actions I needed to take for each of them.
 
-## Feature Engineering
+## Feature Engineering
 
 Using the GeoPy library and the latitude and longitude columns within the dataset, I added the following geographical features:
 
@@ -84,7 +84,7 @@ The table below details the regression models that were fitted to the dataset, a
 ![](../../../Downloads/scores.png)
 
 
-## Evaluation
+## Evaluation
 
 Although the model performed reasonably well for properties priced at under £1000 per night, it struggled to accurately predict the prices of properties that were more expensive.
 
