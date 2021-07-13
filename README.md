@@ -20,7 +20,7 @@ Although the data used for this project is not available in this repository, it 
 
 - If successful, it could be used to help new hosts in determining a suitable rental price for new properties.
 
-- As a by-product of this project, I was also hoping to analyse the attributes that determine the prices of Airbnb properties.
+- As a by-product of this objective, I'm also hoping to analyse the attributes that determine the prices of Airbnb properties.
 
 ## Data Acquisition
 
@@ -53,6 +53,12 @@ Length features were also created for all of the text variables to show how many
 
 I performed an extensive exploratory data analysis to attempt to understand the data, its distributions and to look for any correlations within the data. All of the code used and plots created can be found here: [insert link for EDA].
 
+![](../../../Downloads/airbnb_neighbourhoods.png) ![](../../../Downloads/airbnb_neighbourhoods_2.png)
+
+![](../../../Downloads/violinplot_price.png)
+
+
+
 ## Modelling
 
 #### Feature Selection
@@ -75,7 +81,8 @@ The following Scikit-learn pre-processing steps were applied to the dataset befo
 
 The table below details the regression models that were fitted to the dataset, along with the R2 scores for the training and test sets and the mean 5-fold cross-validation score.
 
-[insert table]
+![](../../../Downloads/scores.png)
+
 
 ## Evaluation
 
@@ -83,7 +90,8 @@ Although the model performed reasonably well for properties priced at under £10
 
 The graph below shows how the random forests model performed when predicting prices in the test set.
 
-[insert graph]
+![](../../../Downloads/residual_plots.png)
+
 
 As you can see, there were several huge residual values, where the model had either under or over predicted the price.
 
