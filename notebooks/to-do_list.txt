@@ -1,0 +1,26 @@
+After completion of project:
+
+EDA:
+
+- EDA for NLP
+
+Pre-processing:
+
+- lowercase the text
+- potentially look in to lemmatization (normalization)
+- clean noise from the data
+- remove stopwords
+
+Modelling:
+
+- review the use of NLP - could we instead look at key words within the variables? This might be a better option for the title variable
+- can we use neural networks?
+
+- geographical map showing where the model has worked well
+
+EDA:
+
+- try to visualise how much information we could potentially be losing out on by not using review data
+- timeseries visualisations - off-topic but could be interesting as a result of Covid impact on 2020
+
+good visualisations: https://towardsdatascience.com/predicting-airbnb-prices-with-deep-learning-part-2-how-to-improve-your-nightly-price-50ea8bc2bd29
