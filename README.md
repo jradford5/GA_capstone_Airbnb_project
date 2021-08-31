@@ -1,16 +1,18 @@
 ##### General Assembly Data Science Immersive Capstone Project
 
-##### Jimmy Radford - June 2021
+##### Jimmy Radford - August 2021
 
 # Predicting the Prices of London Airbnb Properties
 
-A five-week long personal project on building a machine learning model to predict prices of Airbnb properties in London. This was completed as part of a General Assembly London Data Science Immersive course.
+A four-week long personal project on building a machine learning model to predict prices of Airbnb properties in London. The majority of the project was completed as part of a General Assembly London Data Science Immersive course in June 2021, with refinements made in August 2021.
 
 Although the data used for this project is not available in this repository, it can be obtained from its original source at [Inside Airbnb](http://insideairbnb.com/). All code used in the project can be found within the links below.
 
 ## Files in This Repository
 
-[insert notebook links here]
+[Data Cleaning and Feature Engineering](https://github.com/jradford5/GA_capstone_Airbnb_project/blob/main/capstone_airbnb_1_data_cleaning_feature_engineering.ipynb)
+[Exploratory Data Analysis](https://github.com/jradford5/GA_capstone_Airbnb_project/blob/main/capstone_airbnb_2_EDA.ipynb)
+[Pre-processing, Modelling and Summary](https://github.com/jradford5/GA_capstone_Airbnb_project/blob/main/capstone_airbnb_3_pp_and_modelling.ipynb)
 
 ## Objectives
 
