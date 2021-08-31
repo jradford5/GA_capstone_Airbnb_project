@@ -11,7 +11,9 @@ Although the data used for this project is not available in this repository, it 
 ## Files in This Repository
 
 [Data Cleaning and Feature Engineering](https://github.com/jradford5/GA_capstone_Airbnb_project/blob/main/capstone_airbnb_1_data_cleaning_feature_engineering.ipynb)
+
 [Exploratory Data Analysis](https://github.com/jradford5/GA_capstone_Airbnb_project/blob/main/capstone_airbnb_2_EDA.ipynb)
+
 [Pre-processing, Modelling and Summary](https://github.com/jradford5/GA_capstone_Airbnb_project/blob/main/capstone_airbnb_3_pp_and_modelling.ipynb)
 
 ## Objectives
@@ -30,11 +32,11 @@ The data was downloaded in csv format from [Inside Airbnb](http://insideairbnb.c
 
 The listings data contains all information related to each property that can be viewed on the Airbnb website, from the text description the host has written about the it to whether the property has Wifi or laundry facilities.
 
-Overall, there were 74 different columns in the dataset that corresponded to 74,840 rows for each Airbnb property in London.
+Overall, there were 74 different columns in the dataset that corresponded to 73,364 rows for each Airbnb property in London.
 
 ## Data Cleaning
 
- - There were 798,870 null values across 22 different columns in the dataset. Some columns were removed completely as they contained too many null values, whereas others had their null values filled in with the variable mean.
+ - To begin with, there were 770,731 null values in the dataset. Some columns were removed completely as they contained too many null values, whereas others had their null values filled in with the column median.
 
 - Columns that would not have been useful for modelling (host_picture_url, last_scraped) or were virtual duplicates of other columns (bathrooms, neighbourhood_group_cleansed) were also dropped from the dataset.
 
