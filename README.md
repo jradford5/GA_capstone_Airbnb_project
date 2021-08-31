@@ -4,7 +4,7 @@
 
 # Predicting the Prices of London Airbnb Properties
 
-A four-week long personal project on building a machine learning model to predict prices of Airbnb properties in London. The majority of the project was completed as part of a General Assembly London Data Science Immersive course in June 2021, with refinements made in August 2021.
+A five-week long personal project on building a machine learning model to predict prices of Airbnb properties in London. The majority of the project was completed as part of a General Assembly London Data Science Immersive course in June 2021, with refinements made in August 2021.
 
 Although the data used for this project is not available in this repository, it can be obtained from its original source at [Inside Airbnb](http://insideairbnb.com/). All code used in the project can be found within the links below.
 
@@ -40,8 +40,6 @@ Overall, there were 74 different columns in the dataset that corresponded to 73,
 
 - Columns that would not have been useful for modelling (host_picture_url, last_scraped) or were virtual duplicates of other columns (bathrooms, neighbourhood_group_cleansed) were also dropped from the dataset.
 
-- Given that there were a lot of columns, I used a separate data dictionary in a csv file to keep track of what actions I needed to take for each of them.
-
 ## Feature Engineering
 
 Using the GeoPy library and the latitude and longitude columns within the dataset, I added the following geographical features:
@@ -55,13 +53,7 @@ Length features were also created for all of the text variables to show how many
 
 ## EDA
 
-I performed an extensive exploratory data analysis to attempt to understand the data, its distributions and to look for any correlations within the data. All of the code used and plots created can be found here: [insert link for EDA].
-
-![](images/airbnb_neighbourhoods.png) ![](images/airbnb_neighbourhoods_2.png)
-
-![](images/violinplot_price.png)
-
-
+I performed an extensive exploratory data analysis to attempt to understand the data, its distributions and to look for any correlations within the data. All of the code used and plots created can be found in the [EDA notebook](http://localhost:8888/notebooks/capstone_airbnb_2_EDA.ipynb).
 
 ## Modelling
 
@@ -71,33 +63,30 @@ Before preparing the dataset, I selected only features that could be extracted f
 
 #### Train-Test Split
 
-The data was separated 80:20 in to training and test sets.
+The data was separated 80:20 in to training and test sets to ensure that the model performed well on unseen data.
 
 #### Pre-processing
 
-The following Scikit-learn pre-processing steps were applied to the dataset before I began modelling:
+The following pre-processing steps were applied to the dataset before I began modelling:
 
-- OneHotEncoder
-- StandardScaler
-- CountVectorizer
+- log transformation (linear regression with regularisation models only)
+- one-hot encoding
+- standardisation
 
 #### Fitting and Scoring Models
 
-The table below details the regression models that were fitted to the dataset, along with the R2 scores for the training and test sets and the mean 5-fold cross-validation score.
+The table below details the regression models that were fitted to the dataset, along with the r2 scores for the training and test sets and the mean 5-fold cross-validation score.
 
-![](images/scores.png)
+![](images/r2_score_comparison.png)
 
 
 ## Evaluation
 
-Although the model performed reasonably well for properties priced at under £1000 per night, it struggled to accurately predict the prices of properties that were more expensive.
+The best performing model was a bagging regressor, which achieved a cross-validated r2 score of 0.6187.
 
-The graph below shows how the random forests model performed when predicting prices in the test set.
+Below is a comparison of the predicted prices against the true prices in the test set. As the graph shows, the shape of the fit is slightly cloudy, rather than being tight to the red line, which would indicate accurate predictions. Also, the model had a slight tendency to under-predict the prices of the more expensive properties.
 
-![](images/residual_plots.png)
-
-
-As you can see, there were several huge residual values, where the model had either under or over predicted the price.
+![](images/test_set_score_comparison.png)
 
 ## Limitations
 
@@ -105,20 +94,16 @@ As you can see, there were several huge residual values, where the model had eit
 
 One of the biggest limitations of this model, is that it's not able to determine the luxury quality of a property. If a property has expensive furniture or stylish architecture, then the model wouldn't be able to factor that into its predictions.
 
-- Computationally expensive
-
-The final dataset contained over 10,000 columns, which meant that it took a very long time to fit a model on. As a result, I wasn't able to run a very extensive grid search.
-
 - Dataset contains a lot of prices that don't match the quality of the apartment
 
-The biggest dilemma I faced was how to deal with properties that had disproportionately high prices. Although the number of such properties was relatively small, they had a big effect of the performance of my model.
+One of the biggest dilemmas I faced was how to deal with properties that had disproportionately low and high prices. In the end, I decided that the most appropriate solution was to a
 
 ## Conclusions
 
-I've found this to be a really interesting project and a fun dataset to work with, especially with plotting and feature engineering the geographical variables, but I feel that I need to make some changes to my approach before I can be happy that this project has reached its potential.
+I've found this to be a really interesting project and a fun dataset to work with, especially when plotting and feature engineering the geographical variables, but there are a lot of improvements that could improve the model's accuracy.
 
-My next steps are the following:
-
--  revisit the data wrangling part of the project to see if I can come up with a better solution to dealing with the disproportionately high price values
-- tweak the parameters for natural language processing - currently the model is giving importance to insignificant words
-- look in to applying principal component analysis to the model to reduce the amount of features
+- include natural language processing for the text variables - they might be able to help the model work out whether a property is expensive or not
+- simplify the project by attempting a classification model to predict price categories rather than actual prices
+- use neural network models to predict prices
+- acquire better Airbnb data, either by paying for it or scraping it directly from their website
+- incorporate image recognition in to the project to identify important characteristics in properties' photos
