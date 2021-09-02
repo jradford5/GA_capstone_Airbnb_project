@@ -36,24 +36,32 @@ Overall, there were 74 different columns in the dataset that corresponded to 73,
 
 ## Data Cleaning
 
- - To begin with, there were 770,731 null values in the dataset. Some columns were removed completely as they contained too many null values, whereas others had their null values filled in with the column median.
+To begin with, there were 770,731 null values in the dataset. Some columns were removed completely as they contained too many null values, whereas others had their null values filled in with the column median.
 
-- Columns that would not have been useful for modelling (host_picture_url, last_scraped) or were virtual duplicates of other columns (bathrooms, neighbourhood_group_cleansed) were also dropped from the dataset.
+Columns that would not have been useful for modelling (host_picture_url, last_scraped) or were virtual duplicates of other columns (bathrooms, neighbourhood_group_cleansed) were dropped from the dataset.
+
+Several columns had to be amended so that they could be used for modelling purposes. In the example below, I show how I converted the amenities column, containing list values of each property's amenities, in to individual binary columns for each important amenity category.
+
+![](images/amenity_code.png)
 
 ## Feature Engineering
 
 Using the GeoPy library and the latitude and longitude columns within the dataset, I added the following geographical features:
 
 - nearest train or tube station
-- the TFL fare zone of the nearest station
+- distance from the property to centre of London (Trafalgar Square)
 - distance from the property in km to the nearest station
 - based on the postcode of the property, the average monthly rental price for a one-bedroom flat
 
 Length features were also created for all of the text variables to show how many letters each piece of text value.
 
+![](images/location_code.jpg)
+
 ## EDA
 
-I performed an extensive exploratory data analysis to attempt to understand the data, its distributions and to look for any correlations within the data. All of the code used and plots created can be found in the [EDA notebook](http://localhost:8888/notebooks/capstone_airbnb_2_EDA.ipynb).
+I performed an extensive exploratory data analysis to attempt to understand the data, its distributions and to look for any correlations within the data. I've included an example below of a sorted barplot of the correlation between non-categorical variables and the target variable, but all of the code used and plots created can be found in the [EDA notebook](https://github.com/jradford5/GA_capstone_Airbnb_project/blob/main/capstone_airbnb_2_EDA.ipynb).
+
+![](images/correlate_plot.png)
 
 ## Modelling
 
