@@ -12,7 +12,7 @@ Although the data used for this project is not available in this repository, it 
 
 ## Background
 
-
+Airbnb is a worldwide phenomenon within the hospitality industry, with around 150 million users and seven million listings globally they have become many people's number one choice for where they stay whilst on holiday. Given the huge amounts of data available for Airbnb property listings, I was interested in starting a project to explore this dataset and see what kinds of problems can be solved using it.
 
 ## Files in This Repository
 
@@ -55,7 +55,7 @@ Several columns had to be amended so that they could be used for modelling purpo
 Using the GeoPy library and the latitude and longitude columns within the dataset, I added the following geographical features:
 
 - Nearest train or tube station.
-- Distance from the property to centre of London (Trafalgar Square).
+- Distance from the property to the centre of London (Trafalgar Square).
 - Distance from the property in km to the nearest station.
 - Based on the postcode of the property, the average monthly rental price for a one-bedroom flat.
 
@@ -94,32 +94,43 @@ The table below details the regression models that were fitted to the dataset, a
 ![](images/r2_score_comparison.png)
 
 
-## Evaluation
+#### Evaluation
 
-The best performing model was a bagging regressor, which achieved a cross-validated r2 score of 0.6187.
+The best performing model was a bagging regressor, which achieved a cross-validated R2 score of 0.6187.
 
 Below is a comparison of the predicted prices against the true prices in the test set. As the graph shows, the shape of the fit is slightly cloudy, rather than being tight to the red line, which would indicate accurate predictions. Also, the model had a slight tendency to under-predict the prices of the more expensive properties.
 
 ![](images/test_set_score_comparison.png)
 
-## Limitations
 
-- Aesthetics aren't taken in to account.
+### Key Learnings
 
-One of the biggest limitations of this model is that it's not able to determine the luxury quality of a property. If a property has expensive furniture or stylish architecture, then the model wouldn't be able to factor that into its predictions.
+- Ensemble models performed much better than the single models, increasing from an R2 score of 0.5085 with a Decision Tree to 0.6187 with a Bagging regressor.
+- The model's tendency to under-predict suggests that the features we have aren't enough to accurately predict the target variable.
+- In a feature importance analysis of the gradient boosting regressor, the number of properties a host has, how many people a property can accommodate and the number of bathrooms a property has were the most important variables for predicting price.
+- Apart from Kensington & Chelsea and Westminster, the borough a property was located in wasn't that useful a predictor.
+- The property's distance from the center of London was considered a useful predictor, however.
 
-- Dataset contains a lot of prices that don't match the quality of the apartment.
+### Limitations
 
-One of the biggest dilemmas I faced was how to deal with properties that had disproportionately low and high advertised prices. In the end, I decided that the most appropriate solution was to cap property prices at a lower limit of £20 per night and an upper limit of £1000 per night.
+- Aesthetics aren't taken into account.
 
-## Conclusions
+A big limitation of this model is that it's not able to determine the luxury quality of a property. If a property has expensive furniture or stylish architecture, then the model wouldn't be able to factor that into its predictions.
 
-I've found this to be a really interesting project and a fun dataset to work with, especially when plotting and feature engineering the geographical variables, but there are a lot of improvements that could improve the model's accuracy.
+- Dataset contains a lot of prices that don't make any sense.
 
-## Future Work
+One of the hardest dilemmas I faced was how to deal with properties that had disproportionately low and high advertised prices. A frustration with this dataset is that it doesn't contain the prices that people have actually paid for properties. Unfortunately, the advertised prices are prone to being changed by hosts for motives seemingly other than trying to successfully rent out their property. In the end, I decided that the most appropriate solution was to cap property prices at a lower limit of £20 per night and an upper limit of £1000 per night.
+
+### Conclusions
+
+I've found this to be a really interesting project and a fun dataset to work with, especially when plotting and feature engineering the geographical variables, but the obstacles mentioned above prevent the project from producing a more accurate model.
+
+Although an R2 score of 0.6187 suggests that the model has some predictive power, deeper analysis of the predictions compared with the true values shows that there are instances where the model has missed the true value by some distance. It would be really interesting to find out whether natural language processing or image recognition would be able to improve the model's accuracy in these cases.
+
+### Future Work
 
 - Include natural language processing for the text variables - they might be able to help the model work out whether a property is expensive or not.
 - Simplify the project by attempting a classification model to predict price categories rather than actual prices.
 - Use neural network models to predict prices.
 - Acquire better Airbnb data, either by paying for it or scraping it directly from their website.
-- Incorporate image recognition in to the project to identify important characteristics in properties' photos.
+- Incorporate image recognition into the project to identify important characteristics in properties' photos.
