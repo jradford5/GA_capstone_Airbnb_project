@@ -93,7 +93,6 @@ The table below details the regression models that were fitted to the dataset, a
 
 ![](images/r2_score_comparison.png)
 
-
 #### Evaluation
 
 The best performing model was a bagging regressor, which achieved a cross-validated R2 score of 0.6187.
@@ -102,6 +101,7 @@ Below is a comparison of the predicted prices against the true prices in the tes
 
 ![](images/test_set_score_comparison.png)
 
+## Summary
 
 ### Key Learnings
 
