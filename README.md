@@ -59,7 +59,7 @@ Using the GeoPy library and the latitude and longitude columns within the datase
 - Distance from the property in km to the nearest station.
 - Based on the postcode of the property, the average monthly rental price for a one-bedroom flat.
 
-Length features were also created for all of the text variables to show how many letters each piece of text value.
+Features were also created for all of the text variables to show how many letters each feature had.
 
 ![](images/location_code.jpg)
 
@@ -83,9 +83,9 @@ The data was separated 80:20 into training and test sets to ensure that the mode
 
 The following pre-processing steps were applied to the dataset before I began modelling:
 
-- log transformation (linear regression with regularisation models only)
-- one-hot encoding
-- standardisation
+- Log transformation (linear regression with regularisation models only).
+- One-hot encoding.
+- Standardisation.
 
 #### Fitting and Scoring Models
 
@@ -106,18 +106,22 @@ Below is a comparison of the predicted prices against the true prices in the tes
 ### Key Learnings
 
 - Ensemble models performed much better than the single models, increasing from an R2 score of 0.5085 with a Decision Tree to 0.6187 with a Bagging regressor.
+
 - The model's tendency to under-predict suggests that the features we have aren't enough to accurately predict the target variable.
+
 - In a feature importance analysis of the gradient boosting regressor, the number of properties a host has, how many people a property can accommodate and the number of bathrooms a property has were the most important variables for predicting price.
+
 - Apart from Kensington & Chelsea and Westminster, the borough a property was located in wasn't that useful a predictor.
+
 - The property's distance from the center of London was considered a useful predictor, however.
 
 ### Limitations
 
-- Aesthetics aren't taken into account.
+##### Aesthetics aren't taken into account.
 
 A big limitation of this model is that it's not able to determine the luxury quality of a property. If a property has expensive furniture or stylish architecture, then the model wouldn't be able to factor that into its predictions.
 
-- Dataset contains a lot of prices that don't make any sense.
+##### Dataset contains a lot of prices that don't make any sense.
 
 One of the hardest dilemmas I faced was how to deal with properties that had disproportionately low and high advertised prices. A frustration with this dataset is that it doesn't contain the prices that people have actually paid for properties. Unfortunately, the advertised prices are prone to being changed by hosts for motives seemingly other than trying to successfully rent out their property. In the end, I decided that the most appropriate solution was to cap property prices at a lower limit of £20 per night and an upper limit of £1000 per night.
 
@@ -130,7 +134,11 @@ Although an R2 score of 0.6187 suggests that the model has some predictive power
 ### Future Work
 
 - Include natural language processing for the text variables - they might be able to help the model work out whether a property is expensive or not.
+
 - Simplify the project by attempting a classification model to predict price categories rather than actual prices.
+
 - Use neural network models to predict prices.
+
 - Acquire better Airbnb data, either by paying for it or scraping it directly from their website.
+
 - Incorporate image recognition into the project to identify important characteristics in properties' photos.
