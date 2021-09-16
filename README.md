@@ -117,11 +117,11 @@ Below is a comparison of the predicted prices against the true prices in the tes
 
 ### Limitations
 
-##### Aesthetics aren't taken into account.
+#### Aesthetics aren't taken into account.
 
 A big limitation of this model is that it's not able to determine the luxury quality of a property. If a property has expensive furniture or stylish architecture, then the model wouldn't be able to factor that into its predictions.
 
-##### Dataset contains a lot of prices that don't make any sense.
+#### Dataset contains a lot of prices that don't make any sense.
 
 One of the hardest dilemmas I faced was how to deal with properties that had disproportionately low and high advertised prices. A frustration with this dataset is that it doesn't contain the prices that people have actually paid for properties. Unfortunately, the advertised prices are prone to being changed by hosts for motives seemingly other than trying to successfully rent out their property. In the end, I decided that the most appropriate solution was to cap property prices at a lower limit of £20 per night and an upper limit of £1000 per night.
 
