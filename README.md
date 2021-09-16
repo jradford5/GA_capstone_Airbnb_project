@@ -4,7 +4,7 @@
 
 # Predicting the Prices of London Airbnb Properties
 
-## Overview
+## Overview
 
 A five-week long personal project on building a machine learning model to predict prices of Airbnb properties in London. The majority of the project was completed as part of a General Assembly London Data Science Immersive course in June 2021, with refinements made in August 2021.
 
