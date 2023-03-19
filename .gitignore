@@ -130,3 +130,6 @@ dmypy.json
 
 # Apple folders
 .DS_Store
+
+# Added by Jimmy
+data/
